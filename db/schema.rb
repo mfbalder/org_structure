@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_14_210436) do
     t.integer "manager_id"
     t.string "type"
     t.string "name"
-    t.datetime "date_of_birth"
-    t.datetime "date_of_hire"
+    t.date "date_of_birth"
+    t.date "date_of_hire"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "bonus", precision: 10, scale: 2

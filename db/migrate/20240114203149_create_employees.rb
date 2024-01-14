@@ -6,8 +6,8 @@ class CreateEmployees < ActiveRecord::Migration[7.1]
       t.references :manager, null: true, foreign_key: { to_table: :employees }, comment: 'The manager for this employee'
       t.string :type, comment: 'The type of employee'
       t.string :name, comment: 'The name of the employee'
-      t.datetime :date_of_birth, comment: 'The employee DOB'
-      t.datetime :date_of_hire, comment: 'The date the employee was hired'
+      t.date :date_of_birth, comment: 'The employee DOB'
+      t.date :date_of_hire, comment: 'The date the employee was hired'
       t.timestamps
     end
   end
