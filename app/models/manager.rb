@@ -1,5 +1,7 @@
-class Manager < Employee
-    has_many :employees
+# frozen_string_literal: true
 
-    validates_presence_of :bonus
+class Manager < Employee
+  has_many :employees
+
+  validates_presence_of :bonus
 end

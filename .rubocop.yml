@@ -3,5 +3,8 @@ AllCops:
     - 'db/**/*'
     - 'config/**/*'
     - 'script/**/*'
-    - 'bin/{rails,rake,bundle}'
+    - 'bin/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
+    
+Style/Documentation:
+  Enabled: false
