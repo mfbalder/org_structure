@@ -25,7 +25,7 @@ class EmployeesController < ApplicationController
 
   def index
     employees = if params[:hire_date]
-                  Employee.where(hire_date: params[:hire_data])
+                  Employee.where(date_of_hire: params[:hire_date])
                 else
                   Employee.all
                 end
