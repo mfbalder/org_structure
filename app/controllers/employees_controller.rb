@@ -2,8 +2,13 @@
 
 class EmployeesController < ApplicationController
   def create
-    employee = Employee.create!(employee_params)
-    render json: employee
+    employee = Employee.new(employee_params)
+
+    if employee.save
+      render json: employee
+    else
+      render json: { message: 'Validation failed', errors: employee.errors }, status: 400
+    end
   end
 
   def update
